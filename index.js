@@ -35,6 +35,11 @@ const infoManager = () => {
         }
         ])
         .then((managerResponses)=>{
+        const { name, id, email, officeNumber } = managerResponses;
+        const manager = new manager(name, id, email, officeNumber);
+        
+        positions.push(manager)
+        console.log(manager)
 
         })
 

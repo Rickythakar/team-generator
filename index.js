@@ -10,9 +10,40 @@ const fs = require('fs');
 const positions = [];
 
 
+const infoManager = () => {
+    return inquire
+        .prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the managers name'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the managers id?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the managers email?'
+        },
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: 'What is the managers phone number?'
+        }
+        ])
+        .then((managerResponses)=>{
+
+        })
+
+};
+
 const infoEmployee = () => {
     return inquire
         .prompt([
+
         {
             type: 'input',
             name: 'name',
@@ -65,33 +96,6 @@ const infoEngineer = () => {
 };
 
 const infoIntern = () => {
-    return inquire
-        .prompt([
-        {
-            type: 'input',
-            name: 'name',
-            message: 'What is the managers name'
-        },
-        {
-            type: 'input',
-            name: 'id',
-            message: 'What is the managers id?'
-        },
-        {
-            type: 'input',
-            name: 'email',
-            message: 'What is the managers email?'
-        },
-        {
-            type: 'input',
-            name: 'officeNumber',
-            message: 'What is the managers phone number?'
-        }
-        ])
-
-};
-
-const infoManager = () => {
     return inquire
         .prompt([
         {

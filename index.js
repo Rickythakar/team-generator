@@ -1,79 +1,104 @@
 //Dependencies 
 const generateHtml = require();
-const inquire = require('inquirer');
-const employee = require('./lib/Employee');
-const engineer = require('./lib/Engineer');
-const intern = require('./lib/Intern');
-const manager = require('./lib/Manager');
+const inquirer = require('inquirer');
+const Employee = require('./lib/Employee');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const Manager = require('./lib/Manager');
 const fs = require('fs');
 
-const positions = [];
+//Array that will be filled with employee data
+const team = [];
 
-
-const infoManager = () => {
-    return inquire
+const managerData = () => {
+    return inquirer
         .prompt([
         {
             type: 'input',
-            name: 'name',
+            name: 'managerName',
             message: 'What is the managers name'
         },
         {
             type: 'input',
-            name: 'id',
+            name: 'managerId',
             message: 'What is the managers id?'
         },
         {
             type: 'input',
-            name: 'email',
+            name: 'managerEmail',
             message: 'What is the managers email?'
         },
         {
             type: 'input',
-            name: 'officeNumber',
+            name: 'managerPhoneNumber',
             message: 'What is the managers phone number?'
         }
         ])
         .then((managerResponses)=>{
         const { name, id, email, officeNumber } = managerResponses;
-        const manager = new manager(name, id, email, officeNumber);
+        const manager = new Manager(name, id, email, officeNumber);
         
-        positions.push(manager)
+        team.push(manager)
         console.log(manager)
-
         })
-
 };
 
-const infoEmployee = () => {
+const employeeData = () => {
     return inquire
         .prompt([
 
         {
             type: 'input',
-            name: 'name',
+            name: 'employeeName',
             message: 'What is the employee name'
         },
         {
             type: 'input',
-            name: 'id',
+            name: 'employeeId',
             message: 'What is the employee id?'
         },
         {
             type: 'input',
-            name: 'email',
+            name: 'employeeEmail',
             message: 'What is the employee email?'
         },
         {
             type: 'input',
-            name: 'officeNumber',
+            name: 'employeePhoneNumber',
             message: 'What is the employee phone number?'
         }
         ])
 
 };
 
-const infoEngineer = () => {
+const engineerData = () => {
+    return inquire
+        .prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the managers name'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the managers id?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the managers email?'
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: "What is the engineer's github username?"
+        }
+        ])
+
+};
+
+const internData = () => {
     return inquire
         .prompt([
         {
@@ -99,31 +124,3 @@ const infoEngineer = () => {
         ])
 
 };
-
-const infoIntern = () => {
-    return inquire
-        .prompt([
-        {
-            type: 'input',
-            name: 'name',
-            message: 'What is the managers name'
-        },
-        {
-            type: 'input',
-            name: 'id',
-            message: 'What is the managers id?'
-        },
-        {
-            type: 'input',
-            name: 'email',
-            message: 'What is the managers email?'
-        },
-        {
-            type: 'input',
-            name: 'officeNumber',
-            message: 'What is the managers phone number?'
-        }
-        ])
-
-};
-

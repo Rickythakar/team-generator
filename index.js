@@ -65,9 +65,18 @@ const employeeData = () => {
             message: 'What is the employee email?'
         },
         {
+            //question if employee role is set to intern
             type: 'input',
-            name: 'employeePhoneNumber',
-            message: 'What is the employee phone number?'
+            name: 'school',
+            message: "What is the Intern's school name?",
+            when: (userInput) => userInput.employeeRole === "Intern"
+        },
+        {
+            //question if employee role is set to engineer 
+            type: 'input',
+            name: 'github',
+            message: "What is the engineer's github username?",
+            when: (userInput) => userInput.employeeRole === "Engineer"
         }
         ])
 
@@ -136,8 +145,8 @@ function displayMenu() {
     .prompt([
     {
         type: 'list',
-        name: 'name',
-        message: 'Choose a role',
-        choices: ['Manager', 'Intern', 'Engineer']
+        name: 'employeeRole',
+        message: 'Please choose a role',
+        choices: ['Intern', 'Engineer']
     }])};
     

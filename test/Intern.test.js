@@ -1,12 +1,13 @@
-// const Employee = require("../lib/Employee");
+const Intern = require("../lib/Intern");
 
-// // test can begin employee instance
-// describe("Employee", () => {
-//     it("Begin instance of employee " , () => {
-//         const e = new Employee();
-//         expect(e).toBeInstanceOf(Employee);
-//     });
-//     it("has values", ()=>{
-//         const e = new Employee("Ricky","321","GMAIL.COM")
-//         expect(e.getName()).toBe("Ricky")
-//     })
+// test can begin Intern instance
+describe("Intern", () => {
+    it("Begin instance of Intern " , () => {
+        const e = new Intern();
+        expect(e).toBeInstanceOf(Intern);
+    });
+    it("has values", ()=>{
+        const e = new Intern("Ricky","321","GMAIL.COM")
+        expect(e.getName()).toBe("Ricky")
+    })
+});

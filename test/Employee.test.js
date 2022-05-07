@@ -1,6 +1,5 @@
 const Employee = require("../lib/Employee");
 
-
 // test can begin employee instance
 describe("Employee", () => {
     it("Begin instance of employee " , () => {

@@ -1,11 +1,12 @@
 //Dependencies 
-const generateHtml = require();
+// const generateHtml = require();
 const inquirer = require('inquirer');
 const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const fs = require('fs');
+const { ChildProcess } = require('child_process');
 
 //Array that will be filled with employee data
 const team = [];
@@ -15,22 +16,22 @@ const managerData = () => {
         .prompt([
         {
             type: 'input',
-            name: 'managerName',
+            name: 'name',
             message: 'What is the managers name'
         },
         {
             type: 'input',
-            name: 'managerId',
+            name: 'id',
             message: 'What is the managers id?'
         },
         {
             type: 'input',
-            name: 'managerEmail',
+            name: 'email',
             message: 'What is the managers email?'
         },
         {
             type: 'input',
-            name: 'managerPhoneNumber',
+            name: 'officeNumber',
             message: 'What is the managers phone number?'
         }
         ])
@@ -39,12 +40,13 @@ const managerData = () => {
         const manager = new Manager(name, id, email, officeNumber);
         
         team.push(manager)
+        displayMenu()
         console.log(manager)
         })
 };
 
 const employeeData = () => {
-    return inquire
+    return inquirer
         .prompt([
 
         {
@@ -72,7 +74,7 @@ const employeeData = () => {
 };
 
 const engineerData = () => {
-    return inquire
+    return inquirer
         .prompt([
         {
             type: 'input',
@@ -99,7 +101,7 @@ const engineerData = () => {
 };
 
 const internData = () => {
-    return inquire
+    return inquirer
         .prompt([
         {
             type: 'input',
@@ -122,5 +124,20 @@ const internData = () => {
             message: 'What is the managers phone number?'
         }
         ])
-
 };
+
+function init() {
+    managerData()
+};
+init();
+
+function displayMenu() {
+    return inquirer
+    .prompt([
+    {
+        type: 'list',
+        name: 'name',
+        message: 'Choose a role',
+        choices: ['Manager', 'Intern', 'Engineer']
+    }])};
+    

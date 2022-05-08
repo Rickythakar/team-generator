@@ -8,6 +8,6 @@ describe("Manager", () => {
     });
     it("has values", ()=>{
         const e = new Manager("Ricky","321","GMAIL.COM", "officeNumber")
-        expect(e.getofficeNumber()).toBe("officeNumber")
+        expect(e.getRole()).toBe("Manager")
     })
 });

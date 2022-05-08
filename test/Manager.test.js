@@ -7,7 +7,7 @@ describe("Manager", () => {
         expect(e).toBeInstanceOf(Manager);
     });
     it("has values", ()=>{
-        const e = new Manager("Ricky","321","GMAIL.COM","555-555-5555")
-        expect(e.OfficeNumber()).toBe("555-555-5555")
+        const e = new Manager("Ricky","321","GMAIL.COM", "officeNumber")
+        expect(e.getofficeNumber()).toBe("officeNumber")
     })
 });

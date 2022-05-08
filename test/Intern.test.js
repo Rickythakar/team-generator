@@ -7,7 +7,7 @@ describe("Intern", () => {
         expect(e).toBeInstanceOf(Intern);
     });
     it("has values", ()=>{
-        const e = new Intern("Ricky","321","GMAIL.COM")
-        expect(e.getName()).toBe("Ricky")
+        const e = new Intern("Ricky","321","GMAIL.COM", "school")
+        expect(e.getSchool()).toBe("school")
     })
 });

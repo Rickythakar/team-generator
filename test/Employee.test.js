@@ -11,4 +11,3 @@ describe("Employee", () => {
         expect(e.getName()).toBe("Ricky")
     })
 });
-

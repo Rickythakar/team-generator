@@ -1,10 +1,13 @@
-.row {
+.jumbotron {
+  background-color:rgb(215, 199, 189)
+}
+
+.row{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 
-}
 
-.card {
-    flex: 1 1 150px;
-    justify-content: center;
-}
+  .card-header{
+    font-size: 24px;
+  }

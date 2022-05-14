@@ -1,11 +1,5 @@
-
-
-
-
-
-
-
-`
+function generateHtml(data){
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +18,6 @@
         <p class="lead">Below you can find information for each team member.</p>
       </div>
     </div>
-
 
     <!-- Card for Manager -->
     <div class="row" style="text-align: center;">
@@ -70,3 +63,6 @@
 </body>
 </html>
 `
+};
+
+module.exports = generateHtml;

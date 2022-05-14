@@ -110,8 +110,8 @@ function displayMenu() {
         .then((menuResponse) => {
             const { employeeRole } = menuResponse
             if (employeeRole === 'Exit') {
-                
                 console.log(team)
+                createTeamHtml(team)
                 // inserting generate html funciton to append data to template literals
             }
             else {
@@ -130,5 +130,5 @@ function writeToFile(fileName, data) {
 };
 
 function createTeamHtml(teamData) { 
-   writeToFile("dist/team.html", generateHtml(teamData)
+   writeToFile("dist/team-test.html", generateHtml(teamData)
    )};

@@ -8,9 +8,9 @@ function generateManagerCard(managerData) {
       <h5 class="card-title">${managerData.getName()}</h5>
       <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's
         content.</p>
-      <p class="card-text" id="managerIdNumber">ID Number: </p>
-      <p class="card-text" id="managerEmail">Email: </p>
-      <p class="card-text" id="managerOfficeNumber">Office Number: </p>
+      <p class="card-text" id="managerIdNumber">${managerData.getId()}</p>
+      <p class="card-text" id="managerEmail">${managerData.getEmail()}</p>
+      <p class="card-text" id="managerOfficeNumber"></p>
     </div>
   </div>
   </div>
@@ -24,11 +24,11 @@ function generateInternCard(internData) {
   <div class="card border-dark mb-3" style="max-width: 18rem;">
     <div class="card-header" id="Intern"> Intern</div>
     <div class="card-body text-dark">
-      <h5 class="card-title" id="internName"> Intern Name</h5>
+      <h5 class="card-title" id="internName">${internData.getName()}</h5>
       <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's
         content.</p>
-        <p class="card-text" id="internIdNumber">ID Number: </p>
-      <p class="card-text"> Email: </p>
+        <p class="card-text" id="internIdNumber">${internData.getId()}</p>
+      <p class="card-text"> ${internData.getEmail()} </p>
       <p class="card-text" id="school"> School: </p>
     </div>
   </div>
@@ -43,11 +43,11 @@ function generateEngineerCard(engineerData) {
   <div class="card border-dark mb-3" style="max-width: 18rem;">
     <div class="card-header" id="Engineer">Engineer</div>
     <div class="card-body text-dark">
-      <h5 class="card-title" id="engineerName">Engineer Name</h5>
+      <h5 class="card-title" id="engineerName">${engineerData.getName()}</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
         content.</p>
-        <p class="card-text" id="engineerIdNumber">ID Number: </p>
-      <p class="card-text" id="engineerEmail">Email: </p>
+        <p class="card-text" id="engineerIdNumber">${engineerData.getId()}</p>
+      <p class="card-text" id="engineerEmail">${engineerData.getEmail()}</p>
       <p class="card-text" id="github">Github username: </p>
     </div>
   </div>

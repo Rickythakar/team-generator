@@ -2,7 +2,7 @@ function generateManagerCard(managerData) {
   return `
   <!-- Card for Manager -->
   <div class="row" style="text-align: center;">
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card border-dark mb-3" style="max-width: 20rem;">
     <div class="card-header" id="manager">Manager</div>
     <div class="card-body text-dark">
       <h5 class="card-title">${managerData.getName()}</h5>
@@ -21,7 +21,7 @@ function generateManagerCard(managerData) {
 function generateInternCard(internData) {
   return `
   <!-- Card for Intern -->
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card border-dark mb-3" style="max-width: 20rem;">
     <div class="card-header" id="Intern"> Intern</div>
     <div class="card-body text-dark">
       <h5 class="card-title" id="internName">${internData.getName()}</h5>
@@ -40,7 +40,7 @@ function generateInternCard(internData) {
 function generateEngineerCard(engineerData) {
   return `
   <!-- Card for Engineer -->
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card border-dark mb-3" style="max-width: 20rem;">
     <div class="card-header" id="Engineer">Engineer</div>
     <div class="card-body text-dark">
       <h5 class="card-title" id="engineerName">${engineerData.getName()}</h5>
@@ -103,16 +103,4 @@ function generateHtml(teamData) {
 </html>
 `
 };
-
-// const exampleArr = ['ricky', 'david', 'alicia']
-
-// for (let i = 0; i < exampleArr.length; i++) {
-//   const element = exampleArr[i];
-//   console.log(element);
-// }
-
-// exampleArr.forEach((name) => {
-//   console.log(name);
-// })
-
 module.exports = generateHtml;
